@@ -5,6 +5,7 @@ public class Difficulty {
         int columns = 0;
         int rows = 0;
         int mines = 0;
+        //take difficulty input, switch case determine boardrules
         switch (difficulty) {
             case 1:
                 columns = 9; rows = 9; mines = 10;
@@ -14,8 +15,12 @@ public class Difficulty {
                 break;
             case 3:
                 columns = 16; rows = 30; mines = 99;
+                break;
+            case 4:
+                columns = 3; rows = 3; mines = 2;
                 break;}
-        var boardrules = new int[]{columns, rows, mines};
+        //initialise boardrules array
+        int[] boardrules = new int[]{columns, rows, mines};
 
         return boardrules;
     }
